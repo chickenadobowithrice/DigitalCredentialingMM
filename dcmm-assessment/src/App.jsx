@@ -1281,7 +1281,7 @@ export default function App() {
           <button onClick={() => { setShowResults(!showResults); scrollToTop(); }} style={{
             background: showResults ? "#C4782A" : "rgba(255,255,255,0.2)", color: "#fff",
             border: "none", borderRadius: 8, padding: "8px 16px", fontSize: 13, fontWeight: 700, cursor: "pointer",
-          }}>{showResults ? "\u2190 Questionnaire" : "\ud83d\udcca View Scores"}</button>
+          }}>{showResults ? "Questionnaire" : "View Scores"}</button>
           <button onClick={() => setShowReport(true)} disabled={answered === 0} style={{
             background: answered > 0 ? "#C4782A" : "rgba(255,255,255,0.1)", color: "#fff",
             border: "none", borderRadius: 8, padding: "8px 16px", fontSize: 13, fontWeight: 700,
@@ -1414,7 +1414,7 @@ export default function App() {
                     background: `${activeArea.color}18`, border: `2px solid ${activeArea.color}`,
                     borderRadius: 10, padding: "12px 22px", fontSize: 13, fontWeight: 700,
                     cursor: "pointer", color: activeArea.color,
-                  }}>Next Area \u2192</button>
+                  }}>Next Area</button>
                 )}
                 <button onClick={handleSubmitArea} style={{
                   background: isLastArea
