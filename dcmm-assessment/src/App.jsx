@@ -1286,7 +1286,7 @@ export default function App() {
             background: answered > 0 ? "#C4782A" : "rgba(255,255,255,0.1)", color: "#fff",
             border: "none", borderRadius: 8, padding: "8px 16px", fontSize: 13, fontWeight: 700,
             cursor: answered > 0 ? "pointer" : "not-allowed", opacity: answered > 0 ? 1 : 0.5,
-          }}>\ud83d\udcc4 Generate Report</button>
+          }}>Generate Report</button>
           <button onClick={handleClear} style={{
             background: "rgba(255,80,80,0.2)", color: "#ffaaaa",
             border: "1px solid rgba(255,80,80,0.3)", borderRadius: 8, padding: "8px 14px", fontSize: 12, cursor: "pointer",
@@ -1405,7 +1405,7 @@ export default function App() {
                 <button onClick={() => handleTabChange(AREAS[activeIdx - 1].id)} style={{
                   background: "#f4f4f4", border: "none", borderRadius: 10, padding: "12px 22px",
                   fontSize: 13, fontWeight: 700, cursor: "pointer", color: "#555",
-                }}>\u2190 Previous Area</button>
+                }}>Previous Area</button>
               ) : <div />}
 
               <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
