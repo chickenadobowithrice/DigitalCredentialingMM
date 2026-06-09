@@ -818,18 +818,35 @@ function QuestionCard({ question, factorLabel, value, onChange }) {
           const levelLabels = ["Level 1 – Limited", "Level 2 – Emerging", "Level 3 – Defined", "Level 4 – Managed", "Level 5 – Optimized"];
           return (
             <label key={i} style={{
-              display: "flex", alignItems: "flex-start", gap: 12, cursor: "pointer",
-              padding: "12px 16px", borderRadius: 10,
-              border: selected ? `2px solid ${levelColors[i]}` : "2px solid #e8e8e8",
-              background: selected ? `${levelColors[i]}12` : "#fafafa",
-              transition: "all 0.18s",
-            }}>
-              <input type="radio" name={question.id} value={i} checked={selected} onChange={() => onChange(i)}
-                style={{ marginTop: 2, accentColor: levelColors[i], flexShrink: 0 }} />
-              <div>
-                <div style={{ fontSize: 11, fontWeight: 700, color: levelColors[i], marginBottom: 2 }}>{levelLabels[i]}</div>
-                <div style={{ fontSize: 14, color: "#333", lineHeight: 1.5 }}>{opt}</div>
-              </div>
+                display: "grid",
+                gridTemplateColumns: "24px 1fr",
+                alignItems: "center",
+                gap: 12,
+                cursor: "pointer",
+                padding: "12px 16px",
+                borderRadius: 10,
+                border: selected ? `2px solid ${levelColors[i]}` : "2px solid #e8e8e8",
+                background: selected ? `${levelColors[i]}12` : "#fafafa",
+                transition: "all 0.18s",
+              }}>
+              <input
+                  type="radio"
+                  name={question.id}
+                  value={i}
+                  checked={selected}
+                  onChange={() => onChange(i)}
+                  style={{ accentColor: levelColors[i] }}
+                />
+
+                <div style={{
+                  fontSize: 14,
+                  color: "#333",
+                  lineHeight: 1.5,
+                  textAlign: "justify",
+                  textAlignLast: "left"
+                }}>
+                  {opt}
+                </div>
             </label>
           );
         })}
